@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:padding="20dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.jdts160demo.MainActivity">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_synchro"
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/image_led_irq"
+            android:layout_margin="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/led_green_md"
+            android:contentDescription="@string/led" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <TextView
+        android:id="@+id/text_power"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:text="@string/power"
+        android:textColor="@android:color/white"/>
+
+    <Switch
+        android:id="@+id/switch_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/prm_gauge_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/temp_obj"
+            android:textColor="@android:color/white"/>
+
+        <com.android.jdts160demo.GaugeView
+            android:id="@+id/gauge_view_obj"
+            android:layout_width="@dimen/prm_gauge_size"
+            android:layout_height="@dimen/prm_gauge_size" />
+
+        <TextView
+            android:id="@+id/text_obj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/ntc3_obj"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/sec_gauge_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/ntc2_obj"
+            android:textColor="@android:color/white"/>
+
+        <com.android.jdts160demo.GaugeView
+            android:id="@+id/gauge_view_ntc2"
+            android:layout_width="@dimen/sec_gauge_size"
+            android:layout_height="@dimen/sec_gauge_size" />
+
+        <TextView
+            android:id="@+id/text_ntc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/ntc3_obj"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@id/layout1"
+        android:layout_toLeftOf="@id/layout2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/sec_gauge_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/ntc1_obj"
+            android:textColor="@android:color/white"/>
+
+        <com.android.jdts160demo.GaugeView
+            android:id="@+id/gauge_view_ntc1"
+            android:layout_width="@dimen/sec_gauge_size"
+            android:layout_height="@dimen/sec_gauge_size" />
+
+        <TextView
+            android:id="@+id/text_ntc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/ntc3_obj"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@id/layout1"
+        android:layout_toRightOf="@id/layout2"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/ntc3_obj"
+            android:textColor="@android:color/white"/>
+
+        <com.android.jdts160demo.GaugeView
+            android:id="@+id/gauge_view_ntc3"
+            android:layout_width="@dimen/sec_gauge_size"
+            android:layout_height="@dimen/sec_gauge_size" />
+
+        <TextView
+            android:id="@+id/text_ntc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/ntc3_obj"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/image_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/sec_gauge_margin"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mode_burst"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@android:color/white"/>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mode_cont"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/techart_ms_logo"
+        android:background="@android:color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">JDT1602 sensor demo</string>
+    <string name="temp_obj">Object</string>
+    <string name="ntc1_obj">NTC1</string>
+    <string name="ntc2_obj">NTC2</string>
+    <string name="ntc3_obj">NTC3</string>
+
+    <string name="device_admin">Device admin</string>
+    <string name="device_admin_description">Description</string>
+    <string name="admin_receiver_status">Admin status: %s</string>
+    <string name="admin_receiver_status_enabled">Feature enabled</string>
+    <string name="admin_receiver_status_disable_warning">Disabling warning</string>
+    <string name="admin_receiver_status_disabled">Disabled</string>
+    <string name="admin_receiver_status_pw_changed">Password changed</string>
+    <string name="power">Power</string>
+    <string name="led">led</string>
+
+    <string name="mode_cont">Continuous mode</string>
+    <string name="mode_burst">Burst mode</string>
+</resources>

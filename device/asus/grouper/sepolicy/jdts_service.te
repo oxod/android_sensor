@@ -1,0 +1,4 @@
+type jdts_service, domain;
+type jdts_service_exec, exec_type, file_type;
+
+jdts_service_domain(jdts_service)

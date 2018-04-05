@@ -1,0 +1,23 @@
+#####################################
+# jdts_service_domain(domain)
+
+# Allow a base set of permissions common across Brillo daemons.
+define(`jdts_service_domain', `
+init_daemon_domain($1)
+
+# Allow using binder and performing IPC to system services.
+binder_use($1)
+binder_service($1)
+
+# Allow access to files in /proc.
+# Fixes denials like:
+# avc: denied { read } for pid=1267 comm="peripheralman" name="misc" dev="proc"
+#   ino=4026531967 scontext=u:r:peripheralman:s0
+#   tcontext=u:object_r:proc:s0 tclass=file permissive=0
+allow $1 proc:file r_file_perms;
+
+allow $1 jdtstemperature_service:service_manager find;
+
+# Cut down on spam.
+dontaudit $1 kernel:system module_request;
+')

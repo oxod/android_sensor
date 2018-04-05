@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="prm_gauge_size">300dp</dimen>
+    <dimen name="sec_gauge_size">180dp</dimen>
+    <dimen name="prm_gauge_margin">15dp</dimen>
+    <dimen name="sec_gauge_margin">2dp</dimen>
+
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+
+</resources>
